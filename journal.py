@@ -33,6 +33,7 @@ class Student:
     def __str__(self):
         return f'Имя: {self.name} \nФамилия: {self.surname} \nСредняя оценка за домашнее задание: {self.average_grade()} \nКурсы в процессе обучения: {", ".join(self.courses_in_progress)} \nЗавершенные курсы: {", ".join(self.finished_courses)}'        
 
+
 class Mentor:
     def __init__(self, name, surname):
         self.name = name
@@ -44,7 +45,7 @@ class Lecturer(Mentor):
     def __init__(self, name, surname):
         super().__init__(name, surname)
         self.grades = {}
-    
+
     def average_grade(self):
         total_grades = 0
         total_courses = 0
@@ -73,7 +74,6 @@ class Reviewer(Mentor):
 
     def __str__(self):
         return f'Имя: {self.name} \nФамилия: {self.surname}'
-
 
 best_student = Student('Ruoy', 'Eman', 'your_gender')
 best_student.courses_in_progress += ['Python']
